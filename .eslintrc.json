@@ -1,0 +1,26 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "ignorePatterns": [
+    ".eslintrc.js",
+    "dist",
+    "node_modules",
+    "**/*.config.js",
+    "**/*.spec.js"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "extends": [
+    "eslint-config-airbnb"
+  ],
+  "rules": {
+    "import/no-unresolved": 0,
+    "import/extensions": 0,
+    "import/no-extraneous-dependencies": 0,
+    "class-methods-use-this": 0,
+    "eslint-disable-consistent-return": 0
+  }
+}
