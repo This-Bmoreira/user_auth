@@ -1,7 +1,8 @@
+import InternalServerError from './internal-server-error';
 import MissingParamError from './missing-param-error';
 import Unauthorized from './unauthorized-error';
 
-export default class httpResponse {
+export default class HttpResponse {
   static continue() {
     return {
       statusCode: 100,
@@ -26,9 +27,10 @@ export default class httpResponse {
     };
   }
 
-  static ok() {
+  static ok(data) {
     return {
       statusCode: 200,
+      body: data,
     };
   }
 
@@ -259,6 +261,7 @@ export default class httpResponse {
   static internalServerError() {
     return {
       statusCode: 500,
+      body: new InternalServerError(),
     };
   }
 
