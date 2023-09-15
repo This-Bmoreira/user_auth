@@ -1,5 +1,4 @@
 import InternalServerError from './internal-server-error';
-import MissingParamError from './missing-param-error';
 import Unauthorized from './unauthorized-error';
 
 export default class HttpResponse {
@@ -112,10 +111,10 @@ export default class HttpResponse {
     };
   }
 
-  static badRequest(paramName) {
+  static badRequest(error) {
     return {
       statusCode: 400,
-      body: new MissingParamError(paramName),
+      body: error,
     };
   }
 
