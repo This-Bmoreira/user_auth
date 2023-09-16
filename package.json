@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "node  --experimental-vm-modules node_modules/jest/bin/jest.js --passWithNoTests --runInBand --noStackTrace ",
+    "test:unit": " npm test -- -c jest-unit.config.js ",
+    "test:int": " npm test -- -c jest-int.config.js ",
     "lint": "eslint \"src/**/*.js\" --fix",
     "prepare": "husky install"
   },
