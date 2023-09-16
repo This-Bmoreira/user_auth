@@ -5,7 +5,7 @@
 
 export default {
   testEnvironment: 'node',
-  testMatch: ['**/__tests__/**/*.js?(x)', '**/?(*.)+(spec|int-spec|unit-spec|test).js?(x)'],
+  testMatch: ['**/__tests__/**/*.js?(x)', '**/?(*.)+(unit-spec|unit-test).js?(x)'],
   clearMocks: true,
   collectCoverage: false,
   coverageDirectory: 'coverage',
