@@ -1,6 +1,6 @@
 import InternalServerError from '../error/internal-server-error';
-import InvalidParamError from '../error/invalid-param-error';
-import MissingParamError from '../error/missing-param-error';
+import InvalidParamError from '../../util/error/invalid-param-error';
+import MissingParamError from '../../util/error/missing-param-error'
 import Unauthorized from '../error/unauthorized-error';
 import LoginRouter from './login-router';
 

@@ -1,5 +1,5 @@
-import InternalServerError from '../../presentation/error/internal-server-error';
-import Unauthorized from '../../presentation/error/unauthorized-error';
+import InternalServerError from '../../error/internal-server-error';
+import Unauthorized from '../../error/unauthorized-error';
 
 export default class HttpResponse {
   static continue() {
