@@ -1,7 +1,7 @@
 import { jest } from '@jest/globals';
 import validator from 'validator';
 import EmailValidator from './email-validator';
-
+import MissingParamError from './error/missing-param-error';
 
 describe('Email validator', () => {
   let sut; 
@@ -25,4 +25,10 @@ describe('Email validator', () => {
     expect(isEmailValid).toBe(false);
     isEmailSpy.mockRestore();
   })
+
+  test('Should throw MissingParamError if email is not provided', async () => {
+    expect(() => {
+      sut.isValid();
+    }).toThrow(new MissingParamError('email'));
+  });
 })
